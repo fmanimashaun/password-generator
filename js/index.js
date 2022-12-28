@@ -25,3 +25,10 @@ const generatePassword = (element, n) => {
   element.value = password;
 }
 
+// add event listener to the generate button
+generateBtn.addEventListener("click", () => {
+  generatePassword(firstPassword, 15);
+  generatePassword(secondPassword, 15);
+});
+
+
