@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!--Page container section-->
+    <div class="container">
+
+        <!--Page main section-->
+        <main>
+
+            <!--Password Card-->
+            <div class="password__card">
+
+                <!--Password Card Header-->
+                <h1 class='password__card-title'>Generate a<br><span>random password</span></h1>
+                <p class='password__card-subtext'>Never use an insecure password again.</p>
+                <button class='password__generate-btn'>Generate passwords</button>
+                <!--End of Password Card Header-->
+
+                <hr class='horizontal__line' aria-hidden='true'>
+
+                <!--Generated passwords section-->
+                <fieldset class='password__list'>
+
+                    <!--first password-->
+                    <label for="password1" class='password__item'>
+                        <input type="text" id="password1" name="password" readonly>
+                    </label>
+
+                    <!--second password-->
+                    <label for="password2" class='password__item'>
+                        <input type="text" id="password2" name="password" readonly>
+                    </label>
+
+                </fieldset>
+                <!--End of Generated password section-->
+
+            </div>
+            <!--End of Password Card-->
+
+        </main>
+        <!--End of Page main section-->
+
+        <!--Page footer section-->
+        <footer>
+            <p class="foot__note">
+                created by <a href="https://github.com/fmanimashaun" target="_blank"><strong>fmanimashaun</a></strong>
+            </p>
+        </footer>
+        <!--End of Page footer section-->
+
+    </div>
+    <!--End of Page container section-->
+
+    <script src="js/index.js"></script>
+</body>
+
+</html>

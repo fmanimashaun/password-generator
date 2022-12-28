@@ -1,0 +1,182 @@
+/*import fonts*/
+
+/* karla Font */
+@font-face {
+    font-family: 'Karla';
+    src: url("../fonts/Karla/Karla-VariableFont_wght.ttf") format('TrueType');
+}
+
+/* Inter Font */
+@font-face {
+    font-family: 'Inter';
+    src: url("../fonts/Inter/Inter-VariableFont_slnt_wght.ttf") format('TrueType');
+}
+
+/*Universal styling*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-ff: 'Inter', sans-serif;
+    --secondary-ff: 'Karla', sans-serif;
+}
+
+body {
+    max-width: 100vw;
+    margin: 0;
+    padding: 0;
+    background-color: #1C1C1C;
+    font-family: var(--primary-ff);
+
+    --spacing-1: clamp(1.25rem, calc(-3.07rem + 18.42vw), 3.88rem);
+    --spacing-2: clamp(1.25rem, calc(-1.94rem + 13.60vw), 3.19rem);
+    --spacing-3: clamp(2.75rem, calc(-4.55rem + 31.14vw), 7.19rem);
+}
+
+/*creating a stack container*/
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 0 var(--spacing-1);
+}
+
+/*Set default max-width for all first child of the container class*/
+.container > * {
+    max-width: 100%;
+}
+
+/*Make the main element centered vertically*/
+.container > main {
+    margin: auto;
+    width: 100%;
+}
+
+/*Remove the margin of the first and last child of the container class*/
+.container > :first-child:not(main) {
+    margin-block-start: 0;
+}
+
+
+.container > :last-child:not(main) {
+    margin-block-end: 0;
+}
+
+/* Styling the password card */
+.password__card {
+    background-color: #1F2937;
+    padding: var(--spacing-3) var(--spacing-2);
+    margin-inline: auto;
+    width: 100%;
+    max-width: 550px;
+    min-width: 250px;
+}
+
+/* Reset the margin and padding of all children of password card */
+.password__card * {
+    margin: 0;
+    padding: 0;
+}
+
+/* Styling the password card title*/
+.password__card-title {
+    font-family: var(--secondary-ff);
+    font-style: normal;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 40px;
+    letter-spacing: -0.025em;
+    margin-block-end: 10px;
+    color: #FFFFFF;
+}
+
+.password__card-title span {
+    color: #4ADF86;
+}
+
+/* Styling the password card subtext*/
+.password__card-subtext {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    margin-block-end: 51px;
+    color: #D5D4D8;
+}
+
+/* Styling the password card button */
+.password__generate-btn {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #fff;
+    background: #10B981;
+    border-radius: 6px;
+    padding: 9px 16px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* Styling an horizonal line*/
+.horizontal__line {
+    border: 1px solid #2F3E53;
+    margin: 35px 0;
+}
+
+/* Styling the password list */
+.password__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    border: none;
+}
+
+.password__item {
+    width: 100%;
+    padding: 4px 16px;
+    border-radius: 6px;
+    background-color: #273549;
+}
+
+.password__item input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 32px;
+    text-align: center;
+    color: #55F991;
+}
+
+/* Styling the footer */
+.foot__note {
+    text-align: center;
+    font-size: 0.875rem;
+    line-height: 1.0625rem;
+    margin-block-end: 1.9375rem;
+    color: #fff;
+}
+
+.foot__note a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Readjust the screen layout at 600px viewport */
+@media only screen and (min-width: 600px) {
+    .password__list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .password__item {
+        flex-basis: calc(50% - 24px);
+    }
+}
