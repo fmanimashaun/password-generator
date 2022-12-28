@@ -3,7 +3,7 @@ const generateBtn = document.querySelector(".password__generate-btn");
 const firstPassword = document.querySelector("#password1");
 const secondPassword = document.querySelector("#password2");
 
-// clear the intial value of the password fields
+// set the intial vlaues to nothing
 firstPassword.value = "";
 secondPassword.value = "";
 
