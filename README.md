@@ -29,7 +29,7 @@
 
 ## 📖 Overview <a name="about-project"></a>
 
-The project was built to showcase my skills in HTML, CSS, and JavaScript and how to build an interactive webpage. This is a simple password generator web app. The development is based on the given [Figma](https://www.figma.com/file/NEj9JDycMjF3XKXq7swoc9/Random-Password-Generator-(New-version) design. This is part of the Scrimba Frontend Developer Career Path solo projects.
+The project was built to showcase my skills in HTML, CSS, and JavaScript and how to build an interactive webpage. This is a simple password generator web app. The development is based on the given [Figma](https://www.figma.com/file/NEj9JDycMjF3XKXq7swoc9/Random-Password-Generator-(New-version)) design. This is part of the Scrimba Frontend Developer Career Path solo projects.
 
 ### Project Objectives <a name="project-objectives"></a>
 - Develop the app layout based on the given Figma design.
