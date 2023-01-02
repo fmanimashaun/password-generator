@@ -154,6 +154,9 @@ body {
     height: 10px;
     background-color: #10B981;
     border: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s;
 }
 
 .password__item::after {
@@ -172,7 +175,20 @@ body {
     transition: visibility 0s, opacity 0.5s;
 }
 
-.password__item.copied::after {
+.password__item:not(.nohover):hover:before {
+    content: "";
+    visibility: visible;
+    opacity: 1;
+}
+
+.password__item:not(.nohover):hover::after{
+    content: "Click to copy";
+    visibility: visible;
+    opacity: 1;
+}
+
+.password__item.copied::after,
+.password__item.copied::before {
     visibility: visible;
     opacity: 1;
 }

@@ -36,7 +36,6 @@ generateBtn.addEventListener("click", () => {
 async function copyOnClick (input) {
     try {
       await navigator.clipboard.writeText(input.value);
-      console.log('Text copied to clipboard');
     } catch (error) {
       console.error('Failed to copy text: ', error);
     }
@@ -44,20 +43,41 @@ async function copyOnClick (input) {
 
 firstPassword.addEventListener("click", () => {
   if (firstPassword.value !== "") {
-    console.log('clicked');
     copyOnClick(firstPassword);
     const label = firstPassword.parentElement
-    label.classList.add('copied');
+
+    // add the copied and nohaver class to the label
+    label.classList.add('copied', 'nohover');
+
+    // remove the copied class after 500ms
     setTimeout(function () {
       label.classList.remove('copied');
+    }, 500);
+
+    // remove the nohover class after 1000ms
+    setTimeout(function () {
+      label.classList.remove('nohover');
     }, 1000);
   }
 });
 
 secondPassword.addEventListener("click", () => {
   if (secondPassword.value !== "") {
-    console.log('clicked');
     copyOnClick(secondPassword);
+    const label = secondPassword.parentElement
+
+    // add the copied and nohaver class to the label
+    label.classList.add('copied', 'nohover');
+
+    // remove the copied class after 500ms
+    setTimeout(function () {
+      label.classList.remove('copied');
+    }, 500);
+
+    // remove the nohover class after 1000ms
+    setTimeout(function () {
+      label.classList.remove('nohover');
+    }, 1000);
   }
 });
 
