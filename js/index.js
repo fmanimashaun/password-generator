@@ -2,6 +2,7 @@
 const generateBtn = document.querySelector(".password__generate-btn");
 const firstPassword = document.querySelector("#password1");
 const secondPassword = document.querySelector("#password2");
+const inputLabelCollection = document.querySelectorAll(".password__input-label");
 
 // set the intial vlaues to nothing
 firstPassword.value = "";
@@ -29,6 +30,30 @@ const generatePassword = (element, n) => {
 generateBtn.addEventListener("click", () => {
   generatePassword(firstPassword, 15);
   generatePassword(secondPassword, 15);
+});
+
+// create a copy to clipboard function
+async function copyOnClick (input) {
+    try {
+      await navigator.clipboard.writeText(input.value);
+      console.log('Text copied to clipboard');
+    } catch (error) {
+      console.error('Failed to copy text: ', error);
+    }
+}
+
+firstPassword.addEventListener("click", () => {
+  if (firstPassword.value !== "") {
+    console.log('clicked');
+    copyOnClick(firstPassword);
+  }
+});
+
+secondPassword.addEventListener("click", () => {
+  if (secondPassword.value !== "") {
+    console.log('clicked');
+    copyOnClick(secondPassword);
+  }
 });
 
 
