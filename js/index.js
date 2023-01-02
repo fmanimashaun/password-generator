@@ -46,6 +46,11 @@ firstPassword.addEventListener("click", () => {
   if (firstPassword.value !== "") {
     console.log('clicked');
     copyOnClick(firstPassword);
+    const label = firstPassword.parentElement
+    label.classList.add('copied');
+    setTimeout(function () {
+      label.classList.remove('copied');
+    }, 1000);
   }
 });
 

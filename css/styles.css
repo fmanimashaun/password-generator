@@ -137,10 +137,44 @@ body {
 }
 
 .password__item {
+    position: relative;
     width: 100%;
     padding: 4px 16px;
     border-radius: 6px;
     background-color: #273549;
+}
+
+.password__item::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -10px) rotate(45deg);
+    width: 10px;
+    height: 10px;
+    background-color: #10B981;
+    border: none;
+}
+
+.password__item::after {
+    content: "Copied!";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -5px);
+    background-color: #10B981;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 12px;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s;
+}
+
+.password__item.copied::after {
+    visibility: visible;
+    opacity: 1;
 }
 
 .password__item input {
