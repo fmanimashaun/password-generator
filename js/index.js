@@ -2,7 +2,7 @@
 const generateBtn = document.querySelector(".password__generate-btn");
 const firstPassword = document.querySelector("#password1");
 const secondPassword = document.querySelector("#password2");
-const inputLabelCollection = document.querySelectorAll(".password__input-label");
+const inputLabelCollection = document.querySelectorAll(".password__item");
 
 // set the intial vlaues to nothing
 firstPassword.value = "";
@@ -30,6 +30,9 @@ const generatePassword = (element, n) => {
 generateBtn.addEventListener("click", () => {
   generatePassword(firstPassword, 15);
   generatePassword(secondPassword, 15);
+  inputLabelCollection.forEach(label => {
+    label.classList.add('filled');
+  });
 });
 
 // create a copy to clipboard function

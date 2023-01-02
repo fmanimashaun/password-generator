@@ -3,7 +3,7 @@
 # password-generator
 
 <p align="center">
-  <img width="1200" src="img/confetti_effect.gif">
+  <img width="400" src="img/coverimg.gif">
 </P>
 
 ## 📗 Table of Contents
